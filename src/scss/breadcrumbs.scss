@@ -1,0 +1,35 @@
+.breadcrumbs {
+	padding: 25px 0 26px;
+}
+.breadcrumbs__list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	row-gap: 15px;
+}
+.breadcrumbs__item {
+	font-size: 14px;
+	color: #8d99a3;
+	& + .breadcrumbs__item{
+		margin: 0 0 0 3px;
+		position: relative;
+		padding: 0 0 0 10px;
+		&::before{
+			content: "/";
+			font-size: 16px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+.breadcrumbs__link {
+	font-size: 14px;
+	color: #8d99a3;
+}
+
+@media screen and (max-width: $md){
+	.breadcrumbs {
+		padding: 20px 0 20px;
+	}
+}

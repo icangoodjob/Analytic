@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+	"title":"Восстановление пароля"
+})
+<body>
+
+	<div class="wrapper">
+
+		@@include('html/header.html',{})
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+					<li class="breadcrumbs__item">Восстановить пароль</li>
+				</ul>
+			</div>
+		</div>
+
+		<main class="main">
+			<section class="auth">
+				<div class="container">
+					<div class="auth__body">
+						<div class="auth__box">
+							<div class="auth__image auth__image_password _ibg">
+								<img src="img/auth/password.png" alt="">
+							</div>
+							<form action="#" class="auth__form">
+								<h2 class="auth__title">
+									Восстановить пароль
+								</h2>
+								<div class="auth__items">
+									<div class="auth__item auth__item_user">
+										<input class="auth__input" type="email" placeholder="E-mail или телефон">
+										<button class="auth__icon"><img src="img/auth/user-orange.png" alt=""></button>
+									</div>
+								</div>
+								<button class="auth__button" type="submit">Восстановить</button>
+								<div class="auth__bottom">
+									<span class="auth__text">Уже есть аккаунт?</span>
+									<a href="#" class="auth__link">Войти на сайт</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		@@include('html/footer.html',{})
+
+	</div>
+
+	@@include('html/js.html',{})
+</body>
+</html>

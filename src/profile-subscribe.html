@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+	"title":"Личный кабинет - Подписки"
+})
+<body>
+
+	<div class="wrapper profile-wrapper">
+
+		@@include('html/header.html',{})
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+					<li class="breadcrumbs__item">Личный кабинет</li>
+				</ul>
+			</div>
+		</div>
+
+		<main class="main">
+			<div class="profile">
+				<div class="container">
+					<div class="profile__body">
+						<aside class="aside-profile">
+							<h1 class="aside-profile__title">Мой профиль</h1>
+								<ul class="aside-profile__list">
+									<li><a href="profile-settings.html" class="aside-profile__link">Настройки</a></li>
+									<li><a href="profile-subscribe.html" class="aside-profile__link current">Подписки</a></li>
+									<li><a href="profile-security.html" class="aside-profile__link">Безопасность</a></li>
+									<li><a href="" class="aside-profile__link aside-profile__link_exit"><span>Выход</span></a></li>
+								</ul>
+						</aside>
+						<div class="profile-content">
+							<h2 class="profile-content__title">
+								Подписки
+							</h2>
+							<div class="subscribe">
+								<div class="subscribe__items">
+									<div class="subscribe__item item-subscribe subscribe__item_active">
+										<span class="item-subscribe__icon item-tariff__icon">
+											<img src="img/tariff/icon-1.png" alt="">
+										</span>
+										<span class="item-subscribe__title item-tariff__title">
+											Тариф <span>Start</span>
+										</span>
+										<a href="#" class="item-subscribe__button btn-orange disabled">Отменить подписку</a>
+									</div>
+									<div class="subscribe__item item-subscribe">
+										<span class="item-subscribe__icon item-tariff__icon">
+											<img src="img/tariff/icon-2.png" alt="">
+										</span>
+										<span class="item-subscribe__title item-tariff__title">
+											Тариф <span>Key</span>
+										</span>
+										<a href="#" class="item-subscribe__button btn-orange">Активировать тариф</a>
+									</div>
+									<div class="subscribe__item item-subscribe">
+										<span class="item-subscribe__icon item-tariff__icon">
+											<img src="img/tariff/icon-3.png" alt="">
+										</span>
+										<span class="item-subscribe__title item-tariff__title">
+											Тариф <span>Combo</span>
+										</span>
+										<a href="#" class="item-subscribe__button btn-orange">Активировать тариф</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('html/footer.html',{})
+
+	</div>
+
+	@@include('html/js.html',{})
+</body>
+</html>

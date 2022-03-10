@@ -1,0 +1,23 @@
+@media screen and (max-width: 1520px){
+	.home__video::before {
+		right: -30px;
+		top: 84px;
+	}
+	.video-home__icon.video-home__icon_bell {
+		left: -15px;
+	}
+	.video-home__icon.video-home__icon_rub {
+		right: 10px;
+		bottom: -70px;
+		top: auto;
+	}
+}
+
+@media sreeen and (max-width: $lg){
+	section.home{
+		padding: 150px 0 120px;
+	}
+	.home__body{
+		flex-direction: column;
+	}
+}

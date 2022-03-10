@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+	"title":"Контакты"
+})
+<body>
+
+	<div class="wrapper">
+
+		@@include('html/header.html',{})
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+					<li class="breadcrumbs__item">Контакты</li>
+				</ul>
+			</div>
+		</div>
+
+		<main class="main">
+			<section class="contacts">
+				<div class="container">
+					<div class="heading-block heading-block-common">
+						<div class="heading-block__text">
+							<h2 class="heading-block__title">Наши контакты</h2>
+						</div>
+					</div>
+					<div class="contacts__body">
+						<div class="contacts__top">
+							<div class="contacts__item item-contacts">
+								<span class="item-contacts__icon">
+									<img src="img/contacts/point.png" alt="">
+								</span>
+								<div class="item-contacts__content">
+									<span class="item-contacts__label">Адрес</span>
+									<div class="item-contacts__text">г. Москва, ул. Большая Полянка 51А/9</div>
+								</div>
+							</div>
+							<div class="contacts__item item-contacts">
+								<span class="item-contacts__icon">
+									<img src="img/contacts/phone.png" alt="">
+								</span>
+								<div class="item-contacts__content">
+									<span class="item-contacts__label">Телефон</span>
+									<div class="item-contacts__text">+7 (495) 414 33 19</div>
+								</div>
+							</div>
+							<div class="contacts__item item-contacts">
+								<span class="item-contacts__icon">
+									<img src="img/contacts/tg.png" alt="">
+								</span>
+								<div class="item-contacts__content">
+									<span class="item-contacts__label">Telegram-бот</span>
+									<div class="item-contacts__text">@AnaliticBet_Bot</div>
+								</div>
+							</div>
+							<div class="contacts__item item-contacts">
+								<span class="item-contacts__icon">
+									<img src="img/contacts/email.png" alt="">
+								</span>
+								<div class="item-contacts__content">
+									<span class="item-contacts__label">Поддержка по email</span>
+									<div class="item-contacts__text">info@analiticbet.ru</div>
+								</div>
+							</div>
+						</div>
+						<div class="contacts__map" id="ymap">
+						</div>
+						<div class="contacts-info">
+							<div class="contacts-info__title">
+								<span class="contacts-info__icon">
+									<img src="img/contacts/info.png" alt="">
+								</span>
+								Информация о компании
+							</div>
+							<ul class="contacts-info__list">
+								<li>
+									<span>ИП</span> Скрипник К.В.
+								</li>
+								<li>
+									<span>ИНН</span> 490606919009
+								</li>
+								<li>
+									<span>ОГРНИП</span> 316491000055708
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		@@include('html/footer.html',{})
+
+	</div>
+
+	<script src="https://api-maps.yandex.ru/2.1/?lang=en_RU"></script>
+	@@include('html/js.html',{})
+</body>
+</html>

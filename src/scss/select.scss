@@ -1,0 +1,65 @@
+.select {
+	position: relative;
+}
+.select__item {
+	position: relative;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 3px 20px 0px rgba(22, 57, 59, 0.2);
+	border-radius: 15px;
+}
+.select__title {
+	color: $mainColor;
+	background: #fff;
+	cursor: pointer;
+	border-radius: 15px;
+
+}
+.select__value {
+	display: flex;
+	font-size: 16px;
+	line-height: 125%;
+	min-height: 34px;
+	padding: 8px 15px 6px 15px;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	color: #161619;
+	font-weight: 600;
+}
+.select__value::before {
+	content: "";
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	width: 12px;
+	height: 6px;
+	background: url("../img/icons/arrow-down.png") center / 100% no-repeat;
+	margin-left: 10px;
+}
+.select__options {
+	color: #161619;
+	font-weight: 600;
+	display: none;
+	position: absolute;
+	top: calc(100% + 2px);
+	border-radius: 4px 4px 4px 4px;
+	min-width: 100%;
+	left: 0;
+	background-color: #fff;
+	font-size: 16px;
+	padding: 0px 0px 5px 0px;
+	box-shadow: 0px 0px 10px 0px rgba(22, 57, 59, 0.2);
+}
+.select__option {
+	cursor: pointer;
+	padding: 10px 20px;
+	margin: 0px 0px 0px 0px;
+}
+.select._active {
+	z-index: 5;
+}
+.select._active .select__value::before {
+	transform: rotate(-180deg);
+}
+.select._active.select__options {
+	display: block;
+}

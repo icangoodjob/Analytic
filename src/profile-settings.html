@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+	"title":"Личный кабинет - Настройки"
+})
+<body>
+
+	<div class="wrapper profile-wrapper">
+
+		@@include('html/header.html',{})
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+					<li class="breadcrumbs__item">Личный кабинет</li>
+				</ul>
+			</div>
+		</div>
+
+		<main class="main">
+			<div class="profile">
+				<div class="container">
+					<div class="profile__body">
+						<aside class="aside-profile">
+							<h1 class="aside-profile__title">Мой профиль</h1>
+								<ul class="aside-profile__list">
+									<li><a href="profile-settings.html" class="aside-profile__link current">Настройки</a></li>
+									<li><a href="profile-subscribe.html" class="aside-profile__link">Подписки</a></li>
+									<li><a href="profile-security.html" class="aside-profile__link">Безопасность</a></li>
+									<li><a href="" class="aside-profile__link aside-profile__link_exit"><span>Выход</span></a></li>
+								</ul>
+						</aside>
+						<div class="profile-content profile-content__settings">
+							<h2 class="profile-content__title">
+								Настройки
+							</h2>
+							<form action="#" class="profile-form form">
+								<div class="form__items">
+									<div class="form__item">
+										<label class="form__label form__label_required">Имя</label>
+										<input class="form__input" type="text" autocomplete="off">
+									</div>
+									<div class="form__item">
+										<label class="form__label form__label_required">E-mail</label>
+										<input class="form__input" type="email" autocomplete="off">
+									</div>
+									<div class="form__item">
+										<label class="form__label form__label_required">Номер телефона</label>
+										<input class="form__input" type="number" autocomplete="off">
+									</div>
+									<div class="form__item">
+										<label class="form__label">Telegram-логин <span>(Для уведомлений о&nbsp;прогнозах)</span></label>
+										<input class="form__input" type="text" autocomplete="off">
+									</div>
+								</div>
+								<button class="form__button btn-orange" type="submit">Сохранить</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('html/footer.html',{})
+
+	</div>
+
+	@@include('html/js.html',{})
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+	"title":"Регистрация"
+})
+<body>
+
+	<div class="wrapper">
+
+		@@include('html/header.html',{})
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+					<li class="breadcrumbs__item">Регистрация</li>
+				</ul>
+			</div>
+		</div>
+
+		<main class="main">
+			<section class="auth auth-registration">
+				<div class="container">
+					<div class="auth__body">
+						<div class="auth__box">
+							<div class="auth__image auth__image_reg _ibg">
+								<div class="auth__image-body">
+									<div class="auth-image-content">
+										<div class="auth-image-content__title">
+											<span>Акция</span>
+										</div>
+										<p class="auth-image-content__subtitle">
+											Доступ всего за <span>1&nbsp;руб!</span>
+										</p>
+										<div class="auth-image-content__text">
+											<p>Окончание акции 25.12.2021 в 12:00 <br>
+											Успей купить за 1 рубль!</p>
+											<p>Пробный доступ предоставляется на 5 дней,
+											далее продлевается по 290 руб каждые 5 дней.</p>
+											<p>Зарабатывай <span>сейчас</span>, а плати <span>потом!</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<form action="#" class="auth__form">
+								<h2 class="auth__title">
+									Регистрация
+								</h2>
+								<div class="auth__items">
+									<div class="auth__item auth__item_user">
+										<input class="auth__input" type="email" placeholder="E-mail или телефон">
+										<button class="auth__icon"><img src="img/auth/user-orange.png" alt=""></button>
+									</div>
+								</div>
+								<button class="auth__button" type="submit">Зарегистрироваться</button>
+								<div class="checkbox-items">
+									<div class="checkbox-item">
+										<label>
+											<input type="checkbox" name="category" value="checkbox" class="real-checkbox">
+											<span class="custom-checkbox"></span>
+											<span class="checkbox-item__text">Соглашаюсь с правилами лицензионного договора оферты и условиями предоставления услуг по платной подписке на аналитику. С&nbsp;<a href="#">политикой конфиденциальности</a> ознакомлен(а).</span>
+										</label>
+									</div>
+									<div class="checkbox-item">
+										<label>
+											<input type="checkbox" name="category" value="checkbox" class="real-checkbox">
+											<span class="custom-checkbox"></span>
+											<span class="checkbox-item__text">Согласен с правилами предоставления доступа к&nbsp;сервису по подписке с использованием автоплатежа и уведомлен о подключении платной подписки стоимостью 1 руб. за первые 5 дней доступа, далее с подключенной карты списывается 290 руб. за каждые 5 дней.</span>
+										</label>
+									</div>
+								</div>
+								<div class="auth__bottom">
+									<span class="auth__text">Уже есть аккаунт?</span>
+									<a href="#" class="auth__link">Войти на сайт</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		@@include('html/footer.html',{})
+
+	</div>
+
+	@@include('html/js.html',{})
+</body>
+</html>
