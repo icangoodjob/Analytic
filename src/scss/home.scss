@@ -424,6 +424,24 @@
 	.data-statistics {
 		margin: 40px 0 0;
 	}
+	.statistics__wrapper{
+		height: 100%;
+		overflow: hidden;
+		margin: -30px;
+		padding: 30px;
+	}
+	.data-statistics{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		gap: 0;
+	}
+	.data-statistics__item{
+		width: 180px;
+		flex-shrink: 0;
+	}
 }
 @media screen and (max-width: $sm){
 	.statistics__icon{
@@ -536,6 +554,25 @@
 	.learn__button{
 		max-width: 100%;
 		margin: 40px 0 0;
+	}
+	.learn__wrapper{
+		height: 100%;
+		overflow: hidden;
+	}
+	.learn__wrapper .learn__items{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		gap: 0;
+	}
+	.learn__wrapper .learn__item{
+		flex-shrink: 0;
+		width: 100%;
+	}
+	.learn__image-box{
+		box-shadow: none;
 	}
 }
 @media screen and (max-width: $sm){
@@ -895,15 +932,24 @@
 	margin: 31px 0 0;
 	letter-spacing: -0.24px;
 }
+.testimonials__wrapper{
+	overflow: hidden;
+	margin: -30px;
+	padding: 30px;
+}
+.testimonials__body {
+	width: 100%;
+}
 .testimonials__video {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, 270px);
-	grid-template-rows: auto;
-	justify-content: center;
-	gap: 30px;
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	height: 100%;
+	justify-content: flex-start;
 	margin: 91px 0 0;
 }
 .video-block__item {
+	flex-shrink: 0;
 	position: relative;
 	border-radius: 5px;
 }
@@ -1030,7 +1076,12 @@
 		font-weight: 700;
 	}
 }
-
+.testimonials-pagination .swiper-pagination-current{
+	font-weight: 700;
+}
+.testimonials-pagination .swiper-pagination-total{
+	font-weight: 400;
+}
 @media screen and (max-width: $md){
 	.testimonials .heading-block__subtitle{
 		font-size: 18px;
