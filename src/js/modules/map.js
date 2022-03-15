@@ -16,7 +16,7 @@
         }, {
             iconLayout: 'default#image',
             iconImageHref: 'img/contacts/point.png',
-            iconImageSize: [30, 42],
+            iconImageSize: [24, 32],
             iconImageOffset: [-10, -38]
         });
         myMap.geoObjects.add(myPlacemark);
