@@ -59,55 +59,68 @@ for (let item of testimonialsSliders) {
 	}
 }
 
-
-
 const slider = document.querySelector('.statistics__wrapper');
 const slider2 = document.querySelector('.learn__wrapper');
 let mobileSwiper;
 let mobileSwiper2;
-function mobSwiper() {
-	if (window.innerWidth <= 767.98 && slider.dataset.mobile == 'false'){
-		mobileSwiper = new Swiper(slider, {
-			slidesPerGroup: 1,
-			slidesPerView: 'auto',
-			loop: false,
-			spaceBetween: 20,
-			slideClass: 'data-statistics__item',
-			wrapperClass: 'data-statistics',
-			speed: 500,
-		});
-		mobileSwiper2 = new Swiper(slider2, {
-			slidesPerGroup: 1,
-			slidesPerView: 'auto',
-			loop: false,
-			spaceBetween: 20,
-			slideClass: 'learn__item',
-			wrapperClass: 'learn__items',
-			speed: 500,
-			breakpoints: {
-				300: {
-					slidesPerView: 1,
+
+if (slider2 != null) {
+	function mobSwiper2() {
+		if (window.innerWidth <= 767.98 && slider2.dataset.mobile == 'false'){
+			mobileSwiper2 = new Swiper(slider2, {
+				slidesPerGroup: 1,
+				slidesPerView: 'auto',
+				loop: false,
+				spaceBetween: 20,
+				slideClass: 'learn__item',
+				wrapperClass: 'learn__items',
+				speed: 500,
+				breakpoints: {
+					300: {
+						slidesPerView: 1,
+					},
+					479.98: {
+						slidesPerView: 2,
+					},
 				},
-				479.98: {
-					slidesPerView: 2,
-				},
-			},
-		});
-		slider.dataset.mobile = 'true';
-		slider2.dataset.mobile = 'true';
-	};
-	if (window.innerWidth > 767.98) {
-		slider.dataset.mobile = 'false';
-		slider2.dataset.mobile = 'false';
-		if (slider.classList.contains('swiper-initialized')){
-			mobileSwiper.destroy();
-			mobileSwiper2.destroy();
+			});
+			slider2.dataset.mobile = 'true';
+			if (window.innerWidth > 767.98) {
+				slider2.dataset.mobile = 'false';
+				if (slider2.classList.contains('swiper-initialized')){
+					mobileSwiper2.destroy();
+				}
+			}
 		}
 	}
-};
+	mobSwiper2();
+}
 
-mobSwiper();
+if (slider != null) {
+	function mobSwiper() {
+		if (window.innerWidth <= 767.98 && slider.dataset.mobile == 'false'){
+			mobileSwiper = new Swiper(slider, {
+				slidesPerGroup: 1,
+				slidesPerView: 'auto',
+				loop: false,
+				spaceBetween: 20,
+				slideClass: 'data-statistics__item',
+				wrapperClass: 'data-statistics',
+				speed: 500,
+			});
+			slider.dataset.mobile = 'true';
+		};
+		if (window.innerWidth > 767.98) {
+			slider.dataset.mobile = 'false';
+			if (slider.classList.contains('swiper-initialized')){
+				mobileSwiper.destroy();
+			}
+		}
+	};
+	mobSwiper();
+}
 window.addEventListener('resize', () => {
+	mobSwiper2();
 	mobSwiper();
 });
 
